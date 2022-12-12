@@ -1,9 +1,5 @@
 
 $(document).ready(function () {
-  //img lazy loaded
-  const observer = lozad();
-  observer.observe();
-
   $(document).on('click', '.has-sub', function () {
     var _this = $(this)
     if (!$(this).hasClass('expanded')) {
@@ -59,23 +55,3 @@ $("a.smooth").click(function (e) {
   href = $(this).attr("href");
   pos = $(href).position().top - 30;
 });
-(function () {
-  if (document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") === '') {
-    if (new Date().getHours() > 22 || new Date().getHours() < 6) {
-      document.body.classList.add('night');
-      document.cookie = "night=1;path=/";
-      console.log('夜间模式开启');
-    } else {
-      document.body.classList.remove('night');
-      document.cookie = "night=0;path=/";
-      console.log('夜间模式关闭');
-    }
-  } else {
-    var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-    if (night == '0') {
-      document.body.classList.remove('night');
-    } else if (night == '1') {
-      document.body.classList.add('night');
-    }
-  }
-})();
