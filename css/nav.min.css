@@ -54,7 +54,7 @@ a:hover {
 	vertical-align:top;
 	border-collapse:collapse;
 	border-spacing:0;
-	table-layout:fixed
+	table-layout:fixed;
 }
 a {
 	outline:0!important
@@ -64,8 +64,7 @@ p {
 }
 body,html {
 	height:100%;
-	margin:30px;
 	padding:0;
 	border:none;
-    background-color:#fff !important;
+	margin: 30px;
 }
